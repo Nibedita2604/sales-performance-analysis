@@ -1,0 +1,21 @@
+select * from amazon_sales limit 5;  
+
+select sum(sales) as Total_sales from amazon_sales; 
+
+select Extract(Month from order_date) as Month , SUM(sales) as Monthly_sales from amazon_sales group by Extract(Month from order_date) order by Month;
+
+select product , sum(sales) as total_sales from amazon_sales group by product;
+
+select product , sum(sales) as total_sales from amazon_sales group by product order by total_sales desc;
+
+select product , sum(sales) as total_sales from amazon_sales group by product order by total_sales desc limit 1;
+
+select EXTRACT(MONTH FROM order_date) as Month_Number , to_char(order_date , 'MON') as Month_Name , sum(sales) as total_sales from amazon_sales group by Month_Number , Month_Name order by Month_Number;
+
+select region , sum(sales) as total_sales from amazon_sales group by region order by total_sales desc ;
+
+select product , sum(sales) as total_sales from amazon_sales group by product order by total_sales desc ;
+
+select product , sum(profit) as total_profit from amazon_sales group by product order by total_profit desc ;
+
+select sum(sales) / count( DISTINCT order_id) as average_order_value from amazon_sales ;
