@@ -28,3 +28,5 @@ This analysis helps management optimize pricing, inventory planning, and marketi
 2. Run SQL queries from sql/ folder
 3. Run Python notebook for EDA
 4. Open Power BI dashboard
+
+![Amazon Sales Dasboard](Images/image.png)
